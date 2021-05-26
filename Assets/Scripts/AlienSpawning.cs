@@ -8,7 +8,7 @@ public class AlienSpawning : MonoBehaviour
     [SerializeField] GameObject alienSpaceShip;
 
     [Header("Properties")]
-    [SerializeField] public float timeBetweenWaves = 3f;
+    [SerializeField] public float timeBetweenWaves = 1f;
 
     //private
     private float timeToSpawn = 2f;
@@ -35,6 +35,4 @@ public class AlienSpawning : MonoBehaviour
             }
         }
     }
-
-    //I am making a change!!!
 }
