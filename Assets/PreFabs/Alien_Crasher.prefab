@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 6542210107101191654}
   - component: {fileID: 6542210107101191655}
   - component: {fileID: 6542210107101191652}
+  - component: {fileID: 3502655501988955609}
+  - component: {fileID: 1925112623409405111}
   m_Layer: 0
   m_Name: Alien_Crasher
   m_TagString: Untagged
@@ -95,6 +97,33 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &3502655501988955609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6542210107101191653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd9b858b986b4d34f982d2a2b9677485, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eC: {fileID: 1925112623409405111}
+--- !u!114 &1925112623409405111
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6542210107101191653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e3d0a21a41b5d848b3f2dcc040113e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shipType: Crasher
+  health: 20
 --- !u!1 &6542210107163352385
 GameObject:
   m_ObjectHideFlags: 0
