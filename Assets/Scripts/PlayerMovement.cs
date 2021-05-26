@@ -6,13 +6,16 @@ public class PlayerMovement : MonoBehaviour
 {
     [Header("References")]
     [SerializeField] Rigidbody2D rB;
-
-    [Header("Properties")]
-    [SerializeField] public float moveSpeed = 1000f;
-    [SerializeField] public float turnSpeed = 10f;
+    [SerializeField] PlayerController pC;
 
     //Private Variables
     Vector2 movement;
+    float moveSpeed;
+
+    private void Start()
+    {
+        moveSpeed = pC.moveSpeed;
+    }
 
 
     void Update()

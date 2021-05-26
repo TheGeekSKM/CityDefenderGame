@@ -73,6 +73,8 @@ GameObject:
   - component: {fileID: 7757070535614987149}
   - component: {fileID: 7757070535614987148}
   - component: {fileID: 7757070535614987147}
+  - component: {fileID: 2127244327}
+  - component: {fileID: 7080554091746602261}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -158,6 +160,33 @@ MonoBehaviour:
   rB: {fileID: 7757070535614987149}
   moveSpeed: 2000
   turnSpeed: 10
+--- !u!114 &2127244327
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7757070535614987146}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f14c168d8597235459c0161cfede50a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletObject: {fileID: 8379504312902698595, guid: c3a97059aea96794fb8ad06194a57a50,
+    type: 3}
+  bulletStartPoint: {fileID: 112460174322888679}
+--- !u!114 &7080554091746602261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7757070535614987146}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05377090c40aa2c4d9946ad830964843, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7757070536410325719
 GameObject:
   m_ObjectHideFlags: 0
