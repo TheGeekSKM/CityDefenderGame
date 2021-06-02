@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class EnemyController : MonoBehaviour
 {
+
+
     [Header("Properties")]
     [SerializeField] public string shipType = "Crasher";
     [SerializeField] public float health = 20;

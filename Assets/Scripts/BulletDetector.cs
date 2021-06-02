@@ -7,6 +7,7 @@ public class BulletDetector : MonoBehaviour
     [Header("References")]
     [SerializeField] EnemyController eC;
 
+
     // Update is called once per frame
     void Update()
     {
@@ -27,6 +28,9 @@ public class BulletDetector : MonoBehaviour
         {
             eC.BulletDamage(10f);
             Destroy(collision.gameObject);
+            LevelManager.instance.AddAliensKilled();
         }
+
+        
     }
 }
