@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {
@@ -13,6 +14,7 @@ public class LevelManager : MonoBehaviour
 
     [Header("Properties")]
     [SerializeField] public float aliensKilled = 0f;
+    [SerializeField] public float playerLivesLeft = 3f;
 
 
     void Awake()
@@ -24,12 +26,21 @@ public class LevelManager : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log("Aliens killed: " + aliensKilled);
+        //Debug.Log("Aliens killed: " + aliensKilled);
+        Debug.Log("Lives Left: " + playerLivesLeft);
     }
 
     public void Respawn()
     {
+        playerLivesLeft--;
+
+        if (playerLivesLeft <= 0f)
+        {
+            GameOver();
+        }
+
         Instantiate(playerPrefab, respawnPoint.position, Quaternion.identity);
+        
     }
 
     public void AddAliensKilled()
@@ -40,5 +51,10 @@ public class LevelManager : MonoBehaviour
     public void AddAliensKilled(float num)
     {
         aliensKilled += num;
+    }
+
+    void GameOver()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }
