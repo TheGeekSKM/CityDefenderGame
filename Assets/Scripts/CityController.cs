@@ -1,6 +1,7 @@
 ﻿using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class CityController : MonoBehaviour
 {
@@ -24,6 +25,15 @@ public class CityController : MonoBehaviour
     {
         healthText.text = currentHealth.ToString();
         healthSlider.value = currentHealth;
+        if(currentHealth <= 0f)
+        {
+            Die();
+        }
+    }
+
+    void Die()
+    {
+        LevelManager.instance.GameOver();
     }
 
     public void DamageCity()

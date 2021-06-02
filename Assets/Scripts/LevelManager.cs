@@ -28,6 +28,11 @@ public class LevelManager : MonoBehaviour
     {
         //Debug.Log("Aliens killed: " + aliensKilled);
         Debug.Log("Lives Left: " + playerLivesLeft);
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
+        
     }
 
     public void Respawn()
@@ -53,7 +58,7 @@ public class LevelManager : MonoBehaviour
         aliensKilled += num;
     }
 
-    void GameOver()
+    public void GameOver()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
